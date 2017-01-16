@@ -1,6 +1,6 @@
 # Federated Wiki - SimpleMCQ Plugin
 
-This plugin, type: simplemcq, extends the markup of the federated wiki.
+Simple Multiple Choice Question plugin for the federated wiki.
 
 ## Build
 
