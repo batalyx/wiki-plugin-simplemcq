@@ -23,12 +23,11 @@ class Stem
 
 makeAlt = (row) ->
         [text, comment] = row.match(/(.*): ([^;]*)(?:; ?(.*)|)/)[2..3]
-        console.log ">>> #{text} #{comment}"
+        console.log ">d> #{text} #{comment}"
         new Alternative(text, comment or '', false)
 
 makeAns = (row) ->
         [text, comment] = row.match(/(.*): ([^;]*)(?:; ?(.*)|)/)[2..3]
-        console.log ">>> #{text} #{comment}"
         new Alternative(text, comment or '', true)
 
 class Alternative
@@ -39,16 +38,16 @@ class Alternative
     comment: -> @_comment
 
 emit = ($item, item) ->
-  d = item.text.split('\n')
+  d = item.text.trim().split('\n')
   stem = new Stem d[0].split(': ')[1]
   key = makeAns d[1]
-  dis = (makeAlt(i) for i in d[2..])
+  dis = (makeAlt(i) for i in d[2..4])
   dis.push key
   @alt = shuffle dis
 
   $item.append """
 <div style="background-color:#eee;padding:15px;">
-        <div>#{stem.asHTML()}:</div>
+        <div>#{stem.asHTML()}</div>
         <div class="alts">
         </div>
      </div>
@@ -63,11 +62,11 @@ emit = ($item, item) ->
       paint $flag.get(0)
   ###
   $item.find('.alts').append """
-        <div id="alt1" class="alt">a #{@alt[0].asHTML()}</div>
-        <div id="alt2" class="alt">b #{@alt[1].asHTML()}</div>"""
+        <div id="alt1" class="alt">a) #{@alt[0].asHTML()}</div>
+        <div id="alt2" class="alt">b) #{@alt[1].asHTML()}</div>"""
   $item.find('.alts').append """
-        <div id="alt3" class="alt">c #{@alt[2].asHTML()}</div>
-        <div id="alt4" class="alt">d #{@alt[3].asHTML()}</div>"""
+        <div id="alt3" class="alt">c) #{@alt[2].asHTML()}</div>
+        <div id="alt4" class="alt">d) #{@alt[3].asHTML()}</div>"""
   $item.alt=@alt
 
 bind = ($item, item) ->

@@ -9,9 +9,9 @@
     "plugin"
   ],
   "author": {
-    "name": "Your Name",
-    "email": "you@example.com",
-    "url": "http://example.com"
+    "name": "Jonne Itkonen",
+    "email": "jonne.itkonen@jyu.fi",
+    "url": "http://users.jyu.fi/~ji/"
   },
   "contributors": [],
   "scripts": {
@@ -29,10 +29,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fedwiki/wiki-plugin-simplemcq.git"
+    "url": "https://github.com/batalyx/wiki-plugin-simplemcq.git"
   },
   "bugs": {
-    "url": "https://github.com/fedwiki/wiki-plugin-simplemcq/issues"
+    "url": "https://github.com/batalyx/wiki-plugin-simplemcq/issues"
   },
   "engines": {
     "node": ">=0.10"

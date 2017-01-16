@@ -1,37 +1,231 @@
 {
   "title": "About SimpleMCQ Plugin",
   "story": [
-  {
-    "type": "paragraph",
-    "id": "",
-    "text": "Here we describe the purpose of the plugin and include a sample."
-  },
-  {
-    "type": "simplemcq",
-    "id": "",
-    "text": "This is text in the new plugin. You can *double-click* to edit it too."
-  }
-],
-  "journal": [
-  {
-    "type": "create",
-    "item": {
-      "title": "About SimpleMCQ Plugin",
-      "story": [
-  {
-    "type": "paragraph",
-    "id": "",
-    "text": "Here we describe the purpose of the plugin and include a sample."
-  },
-  {
-    "type": "simplemcq",
-    "id": "",
-    "text": "This is text in the new plugin. You can *double-click* to edit it too."
-  }
-]
+    {
+      "type": "paragraph",
+      "id": "0b68a1af5ff2def5",
+      "text": "This plugin provides a simple multiple-choice question.  It can only have textual elements.  Only one correct answer and three distractors are possible.  The plugin shuffles the answer and distractors, so the order they are presented in changes with every page refresh."
     },
-    "date": 1484570312000,
-    "certificate": "from mkplugin.sh"
-  }
-]
+    {
+      "type": "paragraph",
+      "id": "041b160a1eeb2cac",
+      "text": "Here is an example:"
+    },
+    {
+      "type": "simplemcq",
+      "id": "c9869d12cbac2767",
+      "text": "S: This is the question.\nA: This is the answer.; Here's the description of the answer.\nD: This is the first distractor.; Distractor can also have a description.\nD: This is the second distractor.; Distractor can also have a description.\nD: This is the third distractor.; Distractor can also have a description.\n\n\n\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "67735283bdda1cd5",
+      "text": "Clicking any of the possible choices shows a thumb-up or a thumb-down glyph, and the given description for the choice."
+    },
+    {
+      "type": "paragraph",
+      "id": "8bbd836c352db269",
+      "text": "The stem and the choice/description are presented on the MCQ data paragraph as one line.  Linefeed means new data line.  Data lines are presented with a letter, ': ', text of stem/answer/question, and optionally '; ' followed with the description of the choice.  The description should repeat the choice in some form, as the choice is hidden when the description is shown.  There should be five lines in each MCQ paragraph."
+    },
+    {
+      "type": "paragraph",
+      "id": "b8a9a54dcfdbdb9b",
+      "text": "When a choice is clicked, the description is shown.  User can then click any other choice, there's no constraints on this, but also the old choices are not redisplayed, but the description stays visible.  To see the choices again the user should refresh the page."
+    },
+    {
+      "type": "paragraph",
+      "id": "abe19c6d420daed7",
+      "text": "Currently, no data is saved by this plugin, so there's no records of progress of the user.  Adding a supermemo/anki algorithm to this MCQ would be nice."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "About SimpleMCQ Plugin",
+        "story": [
+          {
+            "type": "paragraph",
+            "id": "",
+            "text": "Here we describe the purpose of the plugin and include a sample."
+          },
+          {
+            "type": "simplemcq",
+            "id": "",
+            "text": "This is text in the new plugin. You can *double-click* to edit it too."
+          }
+        ]
+      },
+      "date": 1484570312000,
+      "certificate": "from mkplugin.sh"
+    },
+    {
+      "type": "edit",
+      "id": "",
+      "item": {
+        "type": "simplemcq",
+        "id": "",
+        "text": "S: This line is for stem.\nA: This is the correct answer.; This is the description of the correct answer.\nD: This is the first distractor.; Distractor can also have a description.\nD: This is the second distractor.; Distractor can also have a description.\nD: This is the third distractor.; Distractor can also have a description.\n"
+      },
+      "date": 1484572479248
+    },
+    {
+      "type": "edit",
+      "id": "",
+      "item": {
+        "type": "simplemcq",
+        "id": "",
+        "text": "Here we describe the purpose of this plugin..."
+      },
+      "date": 1484572567325
+    },
+    {
+      "type": "remove",
+      "id": "",
+      "date": 1484572574918
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0b68a1af5ff2def5"
+      },
+      "id": "0b68a1af5ff2def5",
+      "type": "add",
+      "after": "",
+      "date": 1484572579209
+    },
+    {
+      "type": "edit",
+      "id": "0b68a1af5ff2def5",
+      "item": {
+        "type": "paragraph",
+        "id": "0b68a1af5ff2def5",
+        "text": "This plugin ..."
+      },
+      "date": 1484572592261
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c9869d12cbac2767"
+      },
+      "id": "c9869d12cbac2767",
+      "type": "add",
+      "after": "0b68a1af5ff2def5",
+      "date": 1484572603467
+    },
+    {
+      "type": "edit",
+      "id": "c9869d12cbac2767",
+      "item": {
+        "type": "simplemcq",
+        "id": "c9869d12cbac2767",
+        "text": "S: This is the question.\nA: This is the answer.; Here's the description of the answer.\nD: This is the first distractor.; Distractor can also have a description.\nD: This is the second distractor.; Distractor can also have a description.\nD: This is the third distractor.; Distractor can also have a description.\n"
+      },
+      "date": 1484572647541
+    },
+    {
+      "type": "edit",
+      "id": "c9869d12cbac2767",
+      "item": {
+        "type": "simplemcq",
+        "id": "c9869d12cbac2767",
+        "text": "S: This is the question.\nA: This is the answer.; Here's the description of the answer.\nD: This is the first distractor.; Distractor can also have a description.\nD: This is the second distractor.; Distractor can also have a description.\nD: This is the third distractor.; Distractor can also have a description."
+      },
+      "date": 1484573025813
+    },
+    {
+      "type": "edit",
+      "id": "c9869d12cbac2767",
+      "item": {
+        "type": "simplemcq",
+        "id": "c9869d12cbac2767",
+        "text": "S: This is the question.\nA: This is the answer.; Here's the description of the answer.\nD: This is the first distractor.; Distractor can also have a description.\nD: This is the second distractor.; Distractor can also have a description.\nD: This is the third distractor.; Distractor can also have a description.\n\n\n\n"
+      },
+      "date": 1484573249195
+    },
+    {
+      "type": "edit",
+      "id": "0b68a1af5ff2def5",
+      "item": {
+        "type": "paragraph",
+        "id": "0b68a1af5ff2def5",
+        "text": "This plugin provides a simple multiple-choice question.  It can only have textual elements.  Only one correct answer and three distractors are possible.  The plugin shuffles the answer and distractors, so the order they are presented in changes with every page refresh."
+      },
+      "date": 1484573433043
+    },
+    {
+      "type": "add",
+      "id": "041b160a1eeb2cac",
+      "item": {
+        "type": "paragraph",
+        "id": "041b160a1eeb2cac",
+        "text": "Here is an example:"
+      },
+      "after": "0b68a1af5ff2def5",
+      "date": 1484573440250
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "67735283bdda1cd5"
+      },
+      "id": "67735283bdda1cd5",
+      "type": "add",
+      "after": "c9869d12cbac2767",
+      "date": 1484573444696
+    },
+    {
+      "type": "edit",
+      "id": "67735283bdda1cd5",
+      "item": {
+        "type": "paragraph",
+        "id": "67735283bdda1cd5",
+        "text": "Clicking any of the possible choices shows a thumb-up or a thumb-down glyph, and the given description for the choice."
+      },
+      "date": 1484573514432
+    },
+    {
+      "type": "add",
+      "id": "8bbd836c352db269",
+      "item": {
+        "type": "paragraph",
+        "id": "8bbd836c352db269",
+        "text": "The stem and the choice/description are presented on the MCQ data paragraph as one line.  Linefeed means new data line.  Data lines are presented with a letter, ': ', text of stem/answer/question, and optionally '; ' followed with the description of the choice.  There should be five lines in each MCQ paragraph."
+      },
+      "after": "67735283bdda1cd5",
+      "date": 1484573683419
+    },
+    {
+      "type": "add",
+      "id": "b8a9a54dcfdbdb9b",
+      "item": {
+        "type": "paragraph",
+        "id": "b8a9a54dcfdbdb9b",
+        "text": "When a choice is clicked, the description is shown.  User can then click any other choice, there's no constraints on this, but also the old choices are not redisplayed, but the description stays visible.  To see the choices again the user should refresh the page."
+      },
+      "after": "8bbd836c352db269",
+      "date": 1484573796191
+    },
+    {
+      "type": "add",
+      "id": "abe19c6d420daed7",
+      "item": {
+        "type": "paragraph",
+        "id": "abe19c6d420daed7",
+        "text": "Currently, no data is saved by this plugin, so there's no records of progress of the user.  Adding a supermemo/anki algorithm to this MCQ would be nice."
+      },
+      "after": "b8a9a54dcfdbdb9b",
+      "date": 1484573855257
+    },
+    {
+      "type": "edit",
+      "id": "8bbd836c352db269",
+      "item": {
+        "type": "paragraph",
+        "id": "8bbd836c352db269",
+        "text": "The stem and the choice/description are presented on the MCQ data paragraph as one line.  Linefeed means new data line.  Data lines are presented with a letter, ': ', text of stem/answer/question, and optionally '; ' followed with the description of the choice.  The description should repeat the choice in some form, as the choice is hidden when the description is shown.  There should be five lines in each MCQ paragraph."
+      },
+      "date": 1484573895865
+    }
+  ]
 }
