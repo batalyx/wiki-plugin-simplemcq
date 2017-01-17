@@ -48,7 +48,7 @@ emit = ($item, item) ->
   $item.append """
 <div style="background-color:#eee;padding:15px;">
         <div>#{stem.asHTML()}</div>
-        <div class="alts">
+        <div class="alts" style="cursor:pointer;">
         </div>
      </div>
    """
@@ -85,6 +85,8 @@ bind = ($item, item) ->
   $item.find('#alt4').click (e) ->
           ok = if $item.alt[3].check() then OK else WRONG
           e.toElement.textContent=ok+$item.alt[3].comment()
+  $("div.alt").hover (e) ->
+    $(this).css("background-color", if e.type=="mouseenter" then "beige" else "transparent")
 
 window.plugins.simplemcq = {emit, bind} if window?
 module.exports = {expand} if module?
